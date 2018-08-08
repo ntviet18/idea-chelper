@@ -1,0 +1,25 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id "org.jetbrains.intellij" version "0.3.0"
+}
+
+apply plugin: 'idea'
+apply plugin: 'org.jetbrains.intellij'
+apply plugin: 'java'
+
+intellij {
+    version '2018.2'
+    pluginName 'CHelper'
+}
+
+group 'net.egork'
+version '4.4.2'
+
+dependencies {
+    compile fileTree(dir: 'lib', include: ['*.jar'])
+}
