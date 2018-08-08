@@ -94,9 +94,6 @@ public class Utilities {
 
     private static void ensureLibrary(final Project project) {
         final ProjectData data = Utilities.getData(project);
-        if (data.libraryVersion == ProjectData.CURRENT_LIBRARY_VERSION) {
-            return;
-        }
         fixLibrary(project);
         data.completeMigration(project);
     }
